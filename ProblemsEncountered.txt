@@ -1,1 +1,9 @@
 Validation Failed: Validation failed on parameter 'Coefficients File(coefficient_file)' for Invalid COE File- Missing coefficient Name: memory_initialization_vector . IP 'dist_mem_gen_0'
+
+This was due to syntax errors in an earlier version of the coe file
+If you are having the same issues check your instantiations
+memory_initialization_radix=16;
+memory_initialization_vector= (value), (value), ... , (value);
+
+If these are right (and you haven't already Ai'd this project)
+Then it is a good idea to check if you seperated your hex values with a ';' rather than ','
